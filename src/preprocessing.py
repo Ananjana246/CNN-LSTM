@@ -24,7 +24,6 @@ df.replace([np.inf, -np.inf], np.nan, inplace=True)
 
 # Check missing values
 print("\nMissing Values:")
-
 print(df.isnull().sum().sort_values(ascending=False).head(10))
 
 # Remove missing values
@@ -32,23 +31,17 @@ df.dropna(inplace=True)
 
 # Remove duplicate rows
 before = df.shape[0]
-
 df.drop_duplicates(inplace=True)
-
 after = df.shape[0]
 
 print("\nRows Before:", before)
-
 print("Rows After :", after)
-
 print("Duplicates Removed:", before - after)
-
 print("\nFinal Shape:")
 
 print(df.shape)
 
 print("\nLabel Distribution:")
-
 print(df["Label"].value_counts())
 
 # Label Encoding
@@ -58,7 +51,6 @@ df["Label"] = df["Label"].map({
     "BENIGN": 0,
     "PortScan": 1
 })
-
 print("\nEncoded Label Distribution:")
 print(df["Label"].value_counts())
 
@@ -67,5 +59,4 @@ df.to_csv(
     "dataset/processed/cleaned_portscan.csv",
     index=False
 )
-
 print("\nCleaned dataset saved successfully!")
