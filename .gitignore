@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Dataset
+dataset/
+
+# Trained models
+models/
+
+# Results
+results/
+
+# Jupyter
+.ipynb_checkpoints/
