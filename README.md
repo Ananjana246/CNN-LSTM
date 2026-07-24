@@ -76,22 +76,20 @@ This project implements a hybrid **CNN-LSTM** model that:
 # 📂 Project Structure
 
 ```
-CNN-LSTM-IDS/
+CNN-LSTM/
 │
 ├── dataset/
 │   ├── raw/
 │   └── processed/
 │
-├── docs/
-│
 ├── models/
 │
-├── notebooks/
-│
 ├── results/
-│   ├── metrics/
-│   ├── plots/
-│   └── history.pkl
+│   └── plots/
+│       ├── accuracy.png
+│       ├── loss.png
+│       ├── confusion_matrix.png
+│       └── roc_curve.png
 │
 ├── src/
 │   ├── config.py
@@ -102,11 +100,11 @@ CNN-LSTM-IDS/
 │   ├── model.py
 │   ├── train.py
 │   ├── evaluate.py
-│   ├── predict.py
-│   └── utils.py
+│   └── predict.py
 │
-├── requirements.txt
+├── .gitignore
 ├── README.md
+├── requirements.txt
 └── main.py
 ```
 
@@ -129,7 +127,7 @@ Download it from:
 
 Place the downloaded CSV file inside:
 
-```markdown
+```text
 dataset/raw/
 ```
 
@@ -243,7 +241,7 @@ The project generates the following evaluation plots:
 Clone the repository
 
 ```bash
-git clone https://github.com/ananjanak246/CNN-LSTM-IDS.git
+git clone https://github.com/Ananjana246/CNN-LSTM
 ```
 
 Create a virtual environment
@@ -308,17 +306,13 @@ python src/predict.py
 
 ---
 
+
 # 📁 Output
 
-After successful execution, the project generates:
+After successful execution, the project generates the following visualization files:
 
 ```text
-models/
-└── cnn_lstm.keras
-
 results/
-├── metrics/
-│   └── evaluation.txt
 └── plots/
     ├── accuracy.png
     ├── loss.png
