@@ -47,6 +47,14 @@ with open("results/history.pkl", "wb") as f:
 
 print("✅ Training history saved!")
 
+import pickle
+
+# Save training history
+with open("results/history.pkl", "wb") as file:
+    pickle.dump(history.history, file)
+
+print("✅ Training history saved successfully!")
+
 # ----------------------------
 # Save Model
 # ----------------------------
