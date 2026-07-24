@@ -6,14 +6,18 @@ __pycache__/
 # macOS
 .DS_Store
 
-# Dataset
-dataset/
-
-# Trained models
-models/
-
-# Results
-results/
-
 # Jupyter
 .ipynb_checkpoints/
+
+# Ignore raw dataset only
+dataset/raw/
+
+# Ignore processed dataset (if large)
+dataset/processed/
+
+# Ignore trained model
+models/*.keras
+models/*.h5
+
+# Ignore temporary files
+*.log
